@@ -8,8 +8,14 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
-
+//Yii::$app->user->isGuest ?
+//    ['label' => 'Sign in', 'url' => ['/user/security/login']] :
+//    ['label' => 'Sign out (' . Yii::$app->user->identity->username . ')',
+//        'url' => ['/user/security/logout'],
+//        'linkOptions' => ['data-method' => 'post']],
+//['label' => 'Register', 'url' => ['/user/registration/register'], 'visible' => Yii::$app->user->isGuest]
 AppAsset::register($this);
+
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -71,6 +77,7 @@ AppAsset::register($this);
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>
 </footer>
+
 
 <?php $this->endBody() ?>
 </body>

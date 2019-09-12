@@ -26,8 +26,13 @@ class User extends \yii\base\Object implements \yii\web\IdentityInterface
             'accessToken' => '101-token',
         ],
     ];
-
-
+	 public function afterSave($editor)
+	 {
+		// Назначаем роль в методе afterSave модели User
+		$auth = Yii::$app->authManager;
+		$editor = $auth->getRole('editor'); // Получаем роль editor
+		$auth->assign($editor, $this->id); // Назначаем пользователю, которому принадлежит модель User
+	 }
     /**
      * @inheritdoc
      */

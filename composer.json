@@ -2,7 +2,6 @@
     "name": "yiisoft/yii2-app-basic",
     "description": "Yii 2 Basic Project Template",
     "keywords": ["yii2", "framework", "basic", "project template"],
-    //"homepage": "http://www.yiiframework.com/",
 	"type": "yii2-extension",
     "keywords": [
         "yii2",
